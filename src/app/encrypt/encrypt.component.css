@@ -18,6 +18,6 @@ form {
   cursor: pointer;
   outline: none;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
