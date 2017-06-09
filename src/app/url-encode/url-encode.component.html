@@ -1,0 +1,42 @@
+<section class="section">
+  <div class="container">
+
+    <form (ngSubmit)="onSubmit(form.value)" [formGroup]="form">
+
+      <div class="field">
+        <label class="label">String</label>
+        <p class="control">
+          <textarea [ngClass]="form.get('string').hasError('required')?'is-danger':''" class="textarea"
+                    placeholder="String" name="string"
+                    required formControlName="string"></textarea>
+        </p>
+        <p *ngIf="form.get('string').hasError('required')" class="help is-danger">String is required</p>
+      </div>
+
+      <div class="field">
+        <p class="control">
+          <label class="radio" *ngFor="let radio of radioData">
+            <input type="radio" name="type" [value]="radio.value" formControlName="type">
+            {{radio.label}}
+          </label>
+        </p>
+      </div>
+
+      <div class="field is-grouped">
+        <p class="control">
+          <button class="button is-primary" type="submit" [disabled]="!form.valid">Submit</button>
+        </p>
+      </div>
+
+    </form>
+
+
+    <article class="message result">
+      <div class="message-body">
+        {{string}}
+      </div>
+      <button class="copy" [clip]="string" (onClip)="clipCallback($event)">Copy</button>
+    </article>
+  </div>
+</section>
+<script src="http://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>

@@ -7,12 +7,14 @@ import {HomeComponent} from './home/home.component';
 import {EncryptComponent} from './encrypt/encrypt.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {ClipModule} from "ng2-clip";
+import { UrlEncodeComponent } from './url-encode/url-encode.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EncryptComponent,
+    UrlEncodeComponent,
   ],
   imports: [
     BrowserModule,
