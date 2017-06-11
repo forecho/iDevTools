@@ -1,0 +1,38 @@
+<section class="section">
+  <div class="container">
+
+    <form (submit)="onSubmit(form.value)" [formGroup]="form" class="mb20">
+      <div class="field">
+        <p class="control">
+          <label class="checkbox" *ngFor="let checkbox of checkboxData">
+            <input type="checkbox" formControlName="type" name="type"
+                   [checked]="isAvailable(checkbox.value)" (change)="onChange(checkbox.value, $event)">
+            {{checkbox.label}}
+          </label>
+        </p>
+      </div>
+
+      <div class="field">
+        <p class="control">
+          <label class="label">
+            <input type="number" name="length" class="input" formControlName="length" required
+                   [ngClass]="form.get('length').hasError('required')?'is-danger':''">
+            {{form.length}}
+          </label>
+        </p>
+        <p *ngIf="form.get('length').hasError('required')" class="help is-danger">Length is required</p>
+      </div>
+
+      <div class="field is-grouped">
+        <p class="control">
+          <button class="button is-primary" type="submit" [disabled]="!form.valid">Submit</button>
+        </p>
+      </div>
+
+    </form>
+
+    <app-result [result]="string"></app-result>
+
+  </div>
+</section>
+<script src="http://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>

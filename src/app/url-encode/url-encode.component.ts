@@ -41,8 +41,4 @@ export class UrlEncodeComponent implements OnInit {
     }
     this.type = form.type;
   };
-
-  clipCallback = function (bool) {
-    console.log(bool);
-  };
 }

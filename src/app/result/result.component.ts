@@ -7,7 +7,7 @@ import {Component, OnInit, Input} from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  @Input() result: string;
+  @Input() result: string; // @Input 用于接收父级组建属性
 
   constructor() {
   }
@@ -16,4 +16,8 @@ export class ResultComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  clipCallback = function (bool) {
+    console.log(bool);
+  };
 }
