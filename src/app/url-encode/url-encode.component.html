@@ -1,7 +1,7 @@
 <section class="section">
   <div class="container">
 
-    <form (ngSubmit)="onSubmit(form.value)" [formGroup]="form">
+    <form (ngSubmit)="onSubmit(form.value)" [formGroup]="form" class="mb20">
 
       <div class="field">
         <label class="label">String</label>
@@ -30,13 +30,7 @@
 
     </form>
 
-
-    <article class="message result">
-      <div class="message-body">
-        {{string}}
-      </div>
-      <button class="copy" [clip]="string" (onClip)="clipCallback($event)">Copy</button>
-    </article>
+    <app-result [result]="string"></app-result>
   </div>
 </section>
 <script src="http://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>

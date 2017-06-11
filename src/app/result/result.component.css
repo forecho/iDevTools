@@ -1,0 +1,20 @@
+.result {
+  position: relative;
+}
+
+.result .copy{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: white;
+  border: solid #dbdbdb;
+  border-width: 0 0 1px 1px;
+  color: #7a7a7a;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

@@ -3,12 +3,14 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {EncryptComponent} from "app/encrypt/encrypt.component";
 import {UrlEncodeComponent} from "./url-encode/url-encode.component";
+import {RandomComponent} from "./random/random.component";
 
 const routes: Routes = [
   {path: '', children: []},
   {path: 'home', component: HomeComponent},
   {path: 'encrypt', component: EncryptComponent},
   {path: 'url-encode', component: UrlEncodeComponent},
+  {path: 'random', component: RandomComponent},
 ];
 
 @NgModule({

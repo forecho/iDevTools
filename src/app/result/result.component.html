@@ -1,0 +1,6 @@
+<article class="message result">
+  <div class="message-body">
+    {{result}}
+  </div>
+  <button class="copy" [clip]="result" (onClip)="clipCallback($event)">Copy</button>
+</article>

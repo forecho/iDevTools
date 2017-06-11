@@ -8,6 +8,8 @@ import {EncryptComponent} from './encrypt/encrypt.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {ClipModule} from "ng2-clip";
 import { UrlEncodeComponent } from './url-encode/url-encode.component';
+import { RandomComponent } from './random/random.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { UrlEncodeComponent } from './url-encode/url-encode.component';
     HomeComponent,
     EncryptComponent,
     UrlEncodeComponent,
+    RandomComponent,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@ import * as Hashes from 'jshashes';
 @Component({
   selector: 'app-encrypt',
   templateUrl: './encrypt.component.html',
-  styleUrls: ['./encrypt.component.css']
+  styleUrls: ['./encrypt.component.css'],
 })
 export class EncryptComponent implements OnInit {
 
