@@ -2,7 +2,13 @@
   position: relative;
 }
 
-.result .copy{
+.result pre {
+  background-color: whitesmoke;
+  font-size: 1em;
+  white-space: pre-wrap;
+}
+
+.result .copy {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;

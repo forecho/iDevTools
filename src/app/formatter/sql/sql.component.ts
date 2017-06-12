@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-sql',
@@ -10,7 +13,7 @@ import {Http} from '@angular/http';
 export class SqlComponent implements OnInit {
 
   form;
-  string: string = decodeURIComponent('http%3A%2F%2Fidevtools.org%2Furl-encode'); // 结果初始化数据
+  string: string = ''; // 结果初始化数据
 
   constructor(private fb: FormBuilder, private http: Http) {
     this.form = this.fb.group({
@@ -20,12 +23,16 @@ export class SqlComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      string: new FormControl('select * from foo where val1 = val2;'), //表单初始值
+      string: new FormControl(''), //表单初始值
     })
   }
 
-  onSubmit = function (form) {
-    this.string = this.formatterSql(form.string);
+  onSubmit(form) {
+    this.formatterSql(form.string).subscribe(
+      result => this.string = result.result,
+      err => {
+        console.log(err);
+      });
   }
 
   formatterSql(sql) {
@@ -33,6 +40,8 @@ export class SqlComponent implements OnInit {
     let body = new FormData();
     body.append('sql', sql);
     body.append('reindent', '1');
-    return this.http.post(url, body).subscribe(result => console.log(result));
+    return this.http.post(url, body)
+      .map(res => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 }

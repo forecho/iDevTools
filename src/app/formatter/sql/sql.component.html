@@ -7,7 +7,7 @@
         <label class="label">Type your SQL here:</label>
         <p class="control">
           <textarea [ngClass]="form.get('string').hasError('required')?'is-danger':''" class="textarea"
-                    placeholder="String" name="string"
+                    placeholder="select * from foo where val1 = val2;" name="string"
                     required formControlName="string"></textarea>
         </p>
         <p *ngIf="form.get('string').hasError('required')" class="help is-danger">String is required</p>
