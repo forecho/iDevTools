@@ -11,6 +11,7 @@ import { UrlEncodeComponent } from './url-encode/url-encode.component';
 import { RandomComponent } from './random/random.component';
 import { ResultComponent } from './result/result.component';
 import { TimestampComponent } from './timestamp/timestamp.component';
+import { UnicodeComponent } from './unicode/unicode.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TimestampComponent } from './timestamp/timestamp.component';
     RandomComponent,
     ResultComponent,
     TimestampComponent,
+    UnicodeComponent,
   ],
   imports: [
     BrowserModule,
