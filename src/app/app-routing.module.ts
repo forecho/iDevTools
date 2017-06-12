@@ -6,6 +6,8 @@ import {UrlEncodeComponent} from "./url-encode/url-encode.component";
 import {RandomComponent} from "./random/random.component";
 import {TimestampComponent} from "./timestamp/timestamp.component";
 import {UnicodeComponent} from "./unicode/unicode.component";
+import {SqlComponent as FormatterSqlComponent} from "./formatter/sql/sql.component";
+import {JsonComponent as FormatterJsonComponent} from "./formatter/json/json.component";
 
 const routes: Routes = [
   {path: '', children: []},
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path: 'url-encode', component: UrlEncodeComponent},
   {path: 'random', component: RandomComponent},
   {path: 'unicode', component: UnicodeComponent},
+  {path: 'sql-formatter', component: FormatterSqlComponent},
+  {path: 'json-formatter', component: FormatterJsonComponent},
 ];
 
 @NgModule({

@@ -6,12 +6,15 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {EncryptComponent} from './encrypt/encrypt.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpModule} from '@angular/http';
 import {ClipModule} from "ng2-clip";
-import { UrlEncodeComponent } from './url-encode/url-encode.component';
-import { RandomComponent } from './random/random.component';
-import { ResultComponent } from './result/result.component';
-import { TimestampComponent } from './timestamp/timestamp.component';
-import { UnicodeComponent } from './unicode/unicode.component';
+import {UrlEncodeComponent} from './url-encode/url-encode.component';
+import {RandomComponent} from './random/random.component';
+import {ResultComponent} from './result/result.component';
+import {TimestampComponent} from './timestamp/timestamp.component';
+import {UnicodeComponent} from './unicode/unicode.component';
+import {JsonComponent} from './formatter/json/json.component';
+import {SqlComponent} from './formatter/sql/sql.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { UnicodeComponent } from './unicode/unicode.component';
     ResultComponent,
     TimestampComponent,
     UnicodeComponent,
+    JsonComponent,
+    SqlComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    ClipModule
+    ClipModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
