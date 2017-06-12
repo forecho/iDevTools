@@ -11,7 +11,6 @@ export class RandomComponent implements OnInit {
   form;
   type: string[] = ['upper', 'number', 'lower'];
   string: string = RandomComponent.randomString(10, this.type); // 结果初始化数据
-  length: number;
 
   checkboxData = [
     {label: '大写字母 [A-Z]', value: 'upper'},
@@ -60,12 +59,22 @@ export class RandomComponent implements OnInit {
    */
   static randomString(length, type) {
     let mask = '';
-    if (type.includes('lower')) mask += 'abcdefghijklmnopqrstuvwxyz';
-    if (type.includes('upper')) mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    if (type.includes('number')) mask += '0123456789';
-    if (type.includes('special')) mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';
+    if (type.includes('lower')) {
+      mask += 'abcdefghijklmnopqrstuvwxyz';
+    }
+    if (type.includes('upper')) {
+      mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    }
+    if (type.includes('number')) {
+      mask += '0123456789';
+    }
+    if (type.includes('special')) {
+      mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';
+    }
     let result = '';
-    for (let i = length; i > 0; --i) result += mask[Math.floor(Math.random() * mask.length)];
+    for (let i = length; i > 0; --i) {
+      result += mask[Math.floor(Math.random() * mask.length)];
+    }
     return result;
   }
 }

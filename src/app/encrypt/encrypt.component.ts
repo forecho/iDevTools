@@ -11,7 +11,6 @@ export class EncryptComponent implements OnInit {
 
   form;
   string: string = new Hashes.MD5().hex('iDevTools.org'); // 结果初始化数据
-  type: string;
 
   radioData = [
     {label: 'MD5', value: 'md5'},

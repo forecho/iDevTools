@@ -9,7 +9,6 @@ import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 export class UrlEncodeComponent implements OnInit {
   form;
   string: string = decodeURIComponent('http%3A%2F%2Fidevtools.org%2Furl-encode'); // 结果初始化数据
-  type: string;
 
   radioData = [
     {label: 'Encode', value: 'encode'},
