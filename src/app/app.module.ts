@@ -10,6 +10,7 @@ import {ClipModule} from "ng2-clip";
 import { UrlEncodeComponent } from './url-encode/url-encode.component';
 import { RandomComponent } from './random/random.component';
 import { ResultComponent } from './result/result.component';
+import { TimestampComponent } from './timestamp/timestamp.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ResultComponent } from './result/result.component';
     UrlEncodeComponent,
     RandomComponent,
     ResultComponent,
+    TimestampComponent,
   ],
   imports: [
     BrowserModule,

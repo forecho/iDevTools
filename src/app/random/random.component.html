@@ -17,7 +17,6 @@
           <label class="label">
             <input type="number" name="length" class="input" formControlName="length" required
                    [ngClass]="form.get('length').hasError('required')?'is-danger':''">
-            {{form.length}}
           </label>
         </p>
         <p *ngIf="form.get('length').hasError('required')" class="help is-danger">Length is required</p>

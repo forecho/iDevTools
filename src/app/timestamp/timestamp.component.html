@@ -1,0 +1,30 @@
+<section class="section">
+  <div class="container">
+
+    <form (submit)="onSubmit(form.value)" [formGroup]="form" class="mb20">
+
+      <div class="field">
+        <p class="control">
+          <label class="label">Datetime or Unix TimeStamp</label>
+
+          <input type="text" class="input" formControlName="string" required
+                 [ngClass]="form.get('string').hasError('required')?'is-danger':''">
+        </p>
+        <p *ngIf="form.get('string').hasError('required')" class="help is-danger">Length is required</p>
+      </div>
+
+      <div class="field is-grouped">
+        <p class="control">
+          <button class="button is-primary" type="submit" [disabled]="!form.valid">Transfer</button>
+        </p>
+        <p class="control">
+          <button class="button is-primary" type="button" (click)="currentTime(form)">Current Time</button>
+        </p>
+      </div>
+
+    </form>
+
+    <app-result [result]="string"></app-result>
+
+  </div>
+</section>
