@@ -1,28 +1,18 @@
 <nav class="nav has-shadow">
   <div class="container">
     <div class="nav-left">
-      <a class="nav-item">
+      <a class="nav-item" [routerLink]="['/home']">
         <img src="http://bulma.io/images/bulma-logo.png" alt="iDevTools logo">
       </a>
-      <a class="nav-item is-tab" [routerLink]="['/home']" [routerLinkActive]="['is-active']">首页</a>
+      <a class="nav-item is-tab" [routerLink]="['/random']" [routerLinkActive]="['is-active']">随机字符串</a>
       <a class="nav-item is-tab" [routerLink]="['/encrypt']" [routerLinkActive]="['is-active']">加密</a>
       <a class="nav-item is-tab" [routerLink]="['/timestamp']" [routerLinkActive]="['is-active']">时间戳</a>
       <a class="nav-item is-tab" [routerLink]="['/url-encode']" [routerLinkActive]="['is-active']">Url 编码/解码</a>
-      <a class="nav-item is-tab" [routerLink]="['/random']" [routerLinkActive]="['is-active']">随机字符串</a>
-      <a class="nav-item is-tab" [routerLink]="['/ip']" [routerLinkActive]="['is-active']">IP 查询</a>
-    </div>
-    <span id="nav-toggle" class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
-    <div id="nav-menu" class="nav-right nav-menu">
-      <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/home']" [routerLinkActive]="['is-active']">首页</a>
-      <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/encrypt']" [routerLinkActive]="['is-active']">加密</a>
-      <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/timestamp']" [routerLinkActive]="['is-active']">时间戳</a>
-      <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/url-encode']" [routerLinkActive]="['is-active']">Url 编码/解码</a>
-      <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/random']" [routerLinkActive]="['is-active']">随机字符串</a>
-      <a class="nav-item is-tab is-hidden-tablet" [routerLink]="['/ip']" [routerLinkActive]="['is-active']">IP 查询</a>
+      <a class="nav-item is-tab" [routerLink]="['/unicode']" [routerLinkActive]="['is-active']">Unicode 加密/解密</a>
+      <a class="nav-item is-tab" [routerLink]="['/json-formatter']" [routerLinkActive]="['is-active']">JSON 格式化</a>
+      <a class="nav-item is-tab" [routerLink]="['/sql-formatter']" [routerLinkActive]="['is-active']">SQL 格式化</a>
+      <a class="nav-item is-tab" [routerLink]="['/qrcode-generator']" [routerLinkActive]="['is-active']">生成二维码</a>
+      <!--<a class="nav-item is-tab" [routerLink]="['/ip']" [routerLinkActive]="['is-active']">IP 查询</a>-->
     </div>
   </div>
 </nav>

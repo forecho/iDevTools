@@ -4,7 +4,7 @@
     <form (ngSubmit)="onSubmit(form.value)" [formGroup]="form" class="mb20">
 
       <div class="field">
-        <label class="label">String</label>
+        <label class="label">URL</label>
         <p class="control">
           <textarea [ngClass]="form.get('string').hasError('required')?'is-danger':''" class="textarea"
                     placeholder="String" name="string"
