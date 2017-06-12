@@ -3,8 +3,9 @@
 
     <form (submit)="onSubmit(form.value)" [formGroup]="form" class="mb20">
       <div class="field">
-        <p class="control">
-          <label class="checkbox" *ngFor="let checkbox of checkboxData">
+        <label class="label">Type</label>
+        <p class="control" *ngFor="let checkbox of checkboxData">
+          <label class="checkbox">
             <input type="checkbox" formControlName="type" name="type"
                    [checked]="isAvailable(checkbox.value)" (change)="onChange(checkbox.value, $event)">
             {{checkbox.label}}
@@ -14,10 +15,9 @@
 
       <div class="field">
         <p class="control">
-          <label class="label">
-            <input type="number" name="length" class="input" formControlName="length" required
-                   [ngClass]="form.get('length').hasError('required')?'is-danger':''">
-          </label>
+          <label class="label">Length</label>
+          <input type="number" name="length" class="input" formControlName="length" required
+                 [ngClass]="form.get('length').hasError('required')?'is-danger':''">
         </p>
         <p *ngIf="form.get('length').hasError('required')" class="help is-danger">Length is required</p>
       </div>

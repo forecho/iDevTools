@@ -10,11 +10,6 @@ export class UrlEncodeComponent implements OnInit {
   form;
   string: string = decodeURIComponent('http%3A%2F%2Fidevtools.org%2Furl-encode'); // 结果初始化数据
 
-  radioData = [
-    {label: 'Encode', value: 'encode'},
-    {label: 'Decode', value: 'decode'},
-  ];
-
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       string: ['', Validators.required]
@@ -24,20 +19,18 @@ export class UrlEncodeComponent implements OnInit {
   ngOnInit() {
     this.form = new FormGroup({
       string: new FormControl('http%3A%2F%2Fidevtools.org%2Furl-encode'), //表单初始值
-      type: new FormControl('decode'), // 表单初始值
     })
   }
 
-  onSubmit = function (form) {
-    switch (form.type) {
+  onSubmit = function (form, type) {
+    switch (type) {
       case 'encode':
-        this.string = encodeURIComponent(form.string);
+        this.string = encodeURIComponent(form.value.string);
         break;
 
       case 'decode':
-        this.string = decodeURIComponent(form.string);
+        this.string = decodeURIComponent(form.value.string);
         break;
     }
-    this.type = form.type;
-  };
+  }
 }
