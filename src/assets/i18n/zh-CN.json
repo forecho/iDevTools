@@ -1,0 +1,36 @@
+{
+  "TYPE": "类型",
+  "LENGTH": "长度",
+  "STRING": "字符串",
+  "SUBMIT": "提交",
+  "ENCRYPT": "加密",
+  "_IS_REQUIRED": " 必填",
+  "DATETIME_OR_UNIX_TIMESTAMP": "日期或者时间戳",
+  "TRANSFER": "转换",
+  "CURRENT_TIME": "当前时间",
+  "URL": "URL",
+  "DECODE": "解码",
+  "ENCODE": "编码",
+  "SQL": "SQL",
+  "FORMAT": "格式化",
+  "SELECT_LANG": "选择语言",
+  "LANGUAGES": {
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文"
+  },
+  "RANDOM_TYPES": {
+    "UPPERCASE_LETTERS": "大写字母 [A-Z]",
+    "LOWER_CASE_LETTERS": "小写字母 [a-z]",
+    "NUMBERS": "数字 [0-9]",
+    "SPECIAL_CHARACTERS": "特殊字符 [~`!@#$%^&*()_+-={}[]:\"\\;'<>?,./|]"
+  },
+  "NAV": {
+    "RANDOM": "随机字符串",
+    "ENCRYPT": "加密",
+    "TIMESTAMP": "时间戳",
+    "URL_ENCODE": "URL 编码/解码",
+    "UNICODE": "Unicode 加密/解密",
+    "SQL_FORMATTER": "SQL 格式化"
+  }
+}

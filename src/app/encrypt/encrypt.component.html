@@ -4,29 +4,31 @@
     <form (ngSubmit)="onSubmit(form, 'md5')" [formGroup]="form" class="mb20">
 
       <div class="field">
-        <label class="label">String</label>
+        <label class="label">{{ 'STRING' | translate}}</label>
         <p class="control">
           <textarea [ngClass]="form.get('string').hasError('required')?'is-danger':''" class="textarea"
-                    placeholder="String" name="string"
+                    placeholder="{{ 'STRING' | translate}}" name="string"
                     formControlName="string" required></textarea>
         </p>
-        <p *ngIf="form.get('string').hasError('required')" class="help is-danger">String is required</p>
+        <p *ngIf="form.get('string').hasError('required')" class="help is-danger">
+          {{ 'STRING' | translate}}{{ '_IS_REQUIRED' | translate}}
+        </p>
       </div>
 
       <div class="field is-grouped">
         <p class="control">
           <button class="button is-primary" [disabled]="!form.valid" type="button" (click)="onSubmit(form, 'md5')">
-            MD5 Encrypt
+            MD5 {{ 'ENCRYPT' | translate}}
           </button>
         </p>
         <p class="control">
           <button class="button is-primary" [disabled]="!form.valid" type="button" (click)="onSubmit(form, 'sha1')">
-            SHA1 Encrypt
+            SHA1 {{ 'ENCRYPT' | translate}}
           </button>
         </p>
         <p class="control">
           <button class="button is-primary" [disabled]="!form.valid" type="button" (click)="onSubmit(form, 'sha256')">
-            SHA256 Encrypt
+            SHA256 {{ 'ENCRYPT' | translate}}
           </button>
         </p>
       </div>

@@ -3,28 +3,30 @@
 
     <form (submit)="onSubmit(form.value)" [formGroup]="form" class="mb20">
       <div class="field">
-        <label class="label">Type</label>
+        <label class="label">{{ 'TYPE' | translate }}</label>
         <p class="control" *ngFor="let checkbox of checkboxData">
           <label class="checkbox">
             <input type="checkbox" formControlName="type" name="type"
                    [checked]="isAvailable(checkbox.value)" (change)="onChange(checkbox.value, $event)">
-            {{checkbox.label}}
+            {{checkbox.label | translate }}
           </label>
         </p>
       </div>
 
       <div class="field">
         <p class="control">
-          <label class="label">Length</label>
+          <label class="label">{{ 'LENGTH' | translate }}</label>
           <input type="number" name="length" class="input" formControlName="length" required
                  [ngClass]="form.get('length').hasError('required')?'is-danger':''">
         </p>
-        <p *ngIf="form.get('length').hasError('required')" class="help is-danger">Length is required</p>
+        <p *ngIf="form.get('length').hasError('required')" class="help is-danger">
+          {{ 'LENGTH' | translate}}{{ '_IS_REQUIRED' | translate}}
+        </p>
       </div>
 
       <div class="field is-grouped">
         <p class="control">
-          <button class="button is-primary" type="submit" [disabled]="!form.valid">Submit</button>
+          <button class="button is-primary" type="submit" [disabled]="!form.valid">{{ 'SUBMIT' | translate }}</button>
         </p>
       </div>
 

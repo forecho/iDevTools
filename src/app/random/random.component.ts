@@ -12,18 +12,21 @@ export class RandomComponent implements OnInit {
   type: string[] = ['upper', 'number', 'lower'];
   string: string = RandomComponent.randomString(10, this.type); // 结果初始化数据
 
-  checkboxData = [
-    {label: '大写字母 [A-Z]', value: 'upper'},
-    {label: '小写字母 [a-z]', value: 'lower'},
-    {label: '数字 [0-9]', value: 'number'},
-    {label: '特殊字符 [~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\]', value: 'special'},
-  ];
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       length: ['', Validators.required]
     });
   }
+
+
+  checkboxData = [
+    {label: 'RANDOM_TYPES.UPPERCASE_LETTERS', value: 'upper'},
+    {label: 'RANDOM_TYPES.LOWER_CASE_LETTERS', value: 'lower'},
+    {label: 'RANDOM_TYPES.NUMBERS', value: 'number'},
+    {label: 'RANDOM_TYPES.SPECIAL_CHARACTERS', value: 'special'},
+  ];
+
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -69,7 +72,7 @@ export class RandomComponent implements OnInit {
       mask += '0123456789';
     }
     if (type.includes('special')) {
-      mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';
+      mask += "~`!@#$%^&*()_+-={}[]:\"\\;'<>?,./|";
     }
     let result = '';
     for (let i = length; i > 0; --i) {

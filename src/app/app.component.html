@@ -4,17 +4,39 @@
       <a class="nav-item" [routerLink]="['/home']">
         <img src="http://bulma.io/images/bulma-logo.png" alt="iDevTools logo">
       </a>
-      <a class="nav-item is-tab" [routerLink]="['/random']" [routerLinkActive]="['is-active']">随机字符串</a>
-      <a class="nav-item is-tab" [routerLink]="['/encrypt']" [routerLinkActive]="['is-active']">加密</a>
-      <a class="nav-item is-tab" [routerLink]="['/timestamp']" [routerLinkActive]="['is-active']">时间戳</a>
-      <a class="nav-item is-tab" [routerLink]="['/url-encode']" [routerLinkActive]="['is-active']">Url 编码/解码</a>
-      <a class="nav-item is-tab" [routerLink]="['/unicode']" [routerLinkActive]="['is-active']">Unicode 加密/解密</a>
-      <a class="nav-item is-tab" [routerLink]="['/json-formatter']" [routerLinkActive]="['is-active']">JSON 格式化</a>
-      <a class="nav-item is-tab" [routerLink]="['/sql-formatter']" [routerLinkActive]="['is-active']">SQL 格式化</a>
-      <a class="nav-item is-tab" [routerLink]="['/qrcode-generator']" [routerLinkActive]="['is-active']">生成二维码</a>
+      <a class="nav-item is-tab" [routerLink]="['/random']" [routerLinkActive]="['is-active']">{{ 'NAV.RANDOM' | translate}}</a>
+      <a class="nav-item is-tab" [routerLink]="['/encrypt']" [routerLinkActive]="['is-active']">{{ 'NAV.ENCRYPT' | translate}}</a>
+      <a class="nav-item is-tab" [routerLink]="['/timestamp']" [routerLinkActive]="['is-active']">{{ 'NAV.TIMESTAMP' | translate}}</a>
+      <a class="nav-item is-tab" [routerLink]="['/url-encode']" [routerLinkActive]="['is-active']">{{ 'NAV.URL_ENCODE' | translate}}</a>
+      <a class="nav-item is-tab" [routerLink]="['/unicode']" [routerLinkActive]="['is-active']">{{ 'NAV.UNICODE' | translate}}</a>
+      <!--<a class="nav-item is-tab" [routerLink]="['/json-formatter']" [routerLinkActive]="['is-active']">JSON 格式化</a>-->
+      <a class="nav-item is-tab" [routerLink]="['/sql-formatter']" [routerLinkActive]="['is-active']">{{ 'NAV.SQL_FORMATTER' | translate}}</a>
+      <!--<a class="nav-item is-tab" [routerLink]="['/qrcode-generator']" [routerLinkActive]="['is-active']">生成二维码</a>-->
       <!--<a class="nav-item is-tab" [routerLink]="['/ip']" [routerLinkActive]="['is-active']">IP 查询</a>-->
     </div>
   </div>
+
 </nav>
 
 <router-outlet></router-outlet>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <div class="nav-center">
+        <a (click)="changeLang('en')"><span class="icon"><i class="flag-us flag"></i></span>{{ 'LANGUAGES.en' | translate }}</a>
+        <a (click)="changeLang('zh-CN')"><span class="icon"><i class="flag-cn flag"></i></span>{{ 'LANGUAGES.zh-CN' | translate }}</a>
+      </div>
+      <p>
+        <strong>iDevTools.org</strong> by <a href="http://forecho.com">forecho</a>. The source code is licensed
+        <a href="https://opensource.org/licenses/gpl-3.0.html">GPL-3.0</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+      </p>
+      <p>
+        <a class="icon" href="https://github.com/forecho/iDevTools">
+          <i class="fa fa-github"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

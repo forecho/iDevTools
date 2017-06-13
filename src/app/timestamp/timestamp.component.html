@@ -5,20 +5,24 @@
 
       <div class="field">
         <p class="control">
-          <label class="label">Datetime or Unix TimeStamp</label>
+          <label class="label">{{'DATETIME_OR_UNIX_TIMESTAMP' | translate}}</label>
 
           <input type="text" class="input" formControlName="string" required
                  [ngClass]="form.get('string').hasError('required')?'is-danger':''">
         </p>
-        <p *ngIf="form.get('string').hasError('required')" class="help is-danger">Length is required</p>
+        <p *ngIf="form.get('string').hasError('required')" class="help is-danger">
+          {{ 'DATETIME_OR_UNIX_TIMESTAMP' | translate}}{{ '_IS_REQUIRED' | translate}}
+        </p>
       </div>
 
       <div class="field is-grouped">
         <p class="control">
-          <button class="button is-primary" type="submit" [disabled]="!form.valid">Transfer</button>
+          <button class="button is-primary" type="submit" [disabled]="!form.valid">{{'TRANSFER' | translate}}</button>
         </p>
         <p class="control">
-          <button class="button is-primary" type="button" (click)="currentTime(form)">Current Time</button>
+          <button class="button is-primary" type="button" (click)="currentTime(form)">
+            {{'CURRENT_TIME'| translate}}
+          </button>
         </p>
       </div>
 
