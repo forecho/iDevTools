@@ -1,4 +1,6 @@
 {
+  "COPY": "Copy",
+  "COPIED": "Copied",
   "TYPE": "Type",
   "LENGTH": "Length",
   "STRING": "String",

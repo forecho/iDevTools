@@ -9,6 +9,8 @@ export class ResultComponent implements OnInit {
 
   @Input() result: string; // @Input 用于接收父级组建属性
 
+  button: string = 'COPY';
+
   constructor() {
   }
 
@@ -18,6 +20,7 @@ export class ResultComponent implements OnInit {
 
 
   clipCallback = function (bool) {
+    this.button = 'COPIED';
     console.log(bool);
   };
 }

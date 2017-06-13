@@ -2,5 +2,5 @@
   <div class="message-body">
     <pre [innerHTML]="result"></pre>
   </div>
-  <button class="copy" [clip]="result" (onClip)="clipCallback($event)">Copy</button>
+  <button class="copy" [clip]="result" (onClip)="clipCallback($event)">{{ button | translate}}</button>
 </article>
