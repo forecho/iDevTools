@@ -1,0 +1,38 @@
+{
+  "COPY": "Copy",
+  "COPIED": "Copied",
+  "TYPE": "Type",
+  "LENGTH": "Length",
+  "STRING": "String",
+  "SUBMIT": "Submit",
+  "ENCRYPT": "Encrypt",
+  "_IS_REQUIRED": " is required",
+  "DATETIME_OR_UNIX_TIMESTAMP": "Datetime or Unix TimeStamp",
+  "TRANSFER": "Transfer",
+  "CURRENT_TIME": "Current Time",
+  "URL": "URL",
+  "DECODE": "Decode",
+  "ENCODE": "Encode",
+  "SQL": "SQL",
+  "FORMAT": "Format",
+  "SELECT_LANG": "Select Language",
+  "LANGUAGES": {
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文"
+  },
+  "RANDOM_TYPES": {
+    "UPPERCASE_LETTERS": "Uppercase letters [A-Z]",
+    "LOWER_CASE_LETTERS": "Lower case letters [a-z]",
+    "NUMBERS": "Numbers [0-9]",
+    "SPECIAL_CHARACTERS": "Special characters [~`!@#$%^&*()_+-={}[]:\"\\;'<>?,./|]"
+  },
+  "NAV": {
+    "RANDOM": "Random",
+    "ENCRYPT": "Encrypt",
+    "TIMESTAMP": "Timestamp",
+    "URL_ENCODE": "URL Encode/Decode",
+    "UNICODE": "Unicode Encode/Decode",
+    "SQL_FORMATTER": "SQL Formatter"
+  }
+}
