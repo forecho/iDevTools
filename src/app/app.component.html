@@ -1,8 +1,8 @@
 <nav class="nav has-shadow">
   <div class="container">
     <div class="nav-left">
-      <a class="nav-item" [routerLink]="['/home']">
-        <img src="http://bulma.io/images/bulma-logo.png" alt="iDevTools logo">
+      <a class="nav-item" [routerLink]="['/']">
+        <img src="./assets/logo.png" alt="iDevTools logo">
       </a>
       <a class="nav-item is-tab" [routerLink]="['/random']" [routerLinkActive]="['is-active']">{{ 'NAV.RANDOM' | translate}}</a>
       <a class="nav-item is-tab" [routerLink]="['/encrypt']" [routerLinkActive]="['is-active']">{{ 'NAV.ENCRYPT' | translate}}</a>
@@ -26,6 +26,7 @@
       <div class="nav-center">
         <a (click)="changeLang('en')"><span class="icon"><i class="flag-us flag"></i></span>{{ 'LANGUAGES.en' | translate }}</a>
         <a (click)="changeLang('zh-CN')"><span class="icon"><i class="flag-cn flag"></i></span>{{ 'LANGUAGES.zh-CN' | translate }}</a>
+        <a (click)="changeLang('zh-TW')"><span class="icon"><i class="flag-cn flag"></i></span>{{ 'LANGUAGES.zh-TW' | translate }}</a>
       </div>
       <p>
         <strong>iDevTools.org</strong> by <a href="http://forecho.com">forecho</a>. The source code is licensed

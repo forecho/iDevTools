@@ -10,7 +10,7 @@ import {SqlComponent as FormatterSqlComponent} from "./formatter/sql/sql.compone
 import {JsonComponent as FormatterJsonComponent} from "./formatter/json/json.component";
 
 const routes: Routes = [
-  {path: '', children: []},
+  {path: '', redirectTo: 'random', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'timestamp', component: TimestampComponent},
   {path: 'encrypt', component: EncryptComponent},
