@@ -9,6 +9,8 @@
   "SUBMIT": "Submit",
   "ENCRYPT": "Encrypt",
   "_IS_REQUIRED": " is required",
+  "PRETTIFY": "Prettify",
+  "_DATA_ERROR": " data error",
   "DATETIME_OR_UNIX_TIMESTAMP": "Datetime or Unix TimeStamp",
   "TRANSFER": "Transfer",
   "CURRENT_TIME": "Current Time",
@@ -35,6 +37,7 @@
     "TIMESTAMP": "Timestamp",
     "URL_ENCODE": "URL Encode/Decode",
     "UNICODE": "Unicode Encode/Decode",
+    "JSON_FORMATTER": "JSON Formatter",
     "SQL_FORMATTER": "SQL Formatter"
   }
 }

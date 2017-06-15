@@ -1,3 +1,31 @@
-<p>
-  json works!
-</p>
+<section class="section">
+  <div class="container">
+
+    <form (ngSubmit)="onSubmit(form.value)" [formGroup]="form" class="mb20">
+
+      <div class="field">
+        <label class="label">{{'JSON' | translate}}</label>
+        <p class="control">
+          <textarea [ngClass]="form.get('string').hasError('required')?'is-danger':nu" class="textarea"
+                    placeholder="select * from foo where val1 = val2;" name="string"
+                    required formControlName="string"></textarea>
+        </p>
+        <p *ngIf="form.get('string').hasError('required')" class="help is-danger">
+          {{ 'SQL' | translate}}{{ '_IS_REQUIRED' | translate}}
+        </p>
+        <p *ngIf="!validateJson(form)" class="help is-danger">
+          {{ 'JSON' | translate}}{{ '_DATA_ERROR' | translate}}
+        </p>
+      </div>
+
+      <div class="field is-grouped">
+        <p class="control">
+          <button class="button is-primary" [disabled]="!form.valid || !validateJson(form)" type="submit">{{'PRETTIFY' | translate}}</button>
+        </p>
+      </div>
+
+    </form>
+
+    <app-result [result]="string"></app-result>
+  </div>
+</section>

@@ -9,6 +9,8 @@
   "SUBMIT": "提交",
   "ENCRYPT": "加密",
   "_IS_REQUIRED": " 必填",
+  "PRETTIFY": "美化",
+  "_DATA_ERROR": " 数据错误",
   "DATETIME_OR_UNIX_TIMESTAMP": "日期或者时间戳",
   "TRANSFER": "转换",
   "CURRENT_TIME": "当前时间",
@@ -35,6 +37,7 @@
     "TIMESTAMP": "时间戳",
     "URL_ENCODE": "URL 编码/解码",
     "UNICODE": "Unicode 加密/解密",
+    "JSON_FORMATTER": "JSON 格式化",
     "SQL_FORMATTER": "SQL 格式化"
   }
 }

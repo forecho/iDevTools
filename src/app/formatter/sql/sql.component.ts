@@ -21,7 +21,7 @@ export class SqlComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      string: new FormControl(''), //表单初始值
+      string: new FormControl('select * from foo where val1 = val2;'), //表单初始值
     })
   }
 

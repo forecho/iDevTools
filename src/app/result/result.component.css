@@ -6,6 +6,7 @@
   background-color: whitesmoke;
   font-size: 1em;
   white-space: pre-wrap;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 .result .copy {
