@@ -6,7 +6,7 @@
       <div class="field">
         <label class="label">{{'JSON' | translate}}</label>
         <p class="control">
-          <textarea [ngClass]="form.get('string').hasError('required')?'is-danger':nu" class="textarea"
+          <textarea [ngClass]="form.get('string').hasError('required')?'is-danger':null" class="textarea"
                     placeholder="select * from foo where val1 = val2;" name="string"
                     required formControlName="string"></textarea>
         </p>
@@ -20,7 +20,9 @@
 
       <div class="field is-grouped">
         <p class="control">
-          <button class="button is-primary" [disabled]="!form.valid || !validateJson(form)" type="submit">{{'PRETTIFY' | translate}}</button>
+          <button class="button is-primary" [disabled]="!form.valid || !validateJson(form)" type="submit">
+            {{'PRETTIFY' | translate}}
+          </button>
         </p>
       </div>
 
