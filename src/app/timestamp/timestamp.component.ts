@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import {FormGroup, FormControl} from '@angular/forms';
 
 
 @Component({
@@ -12,10 +12,7 @@ export class TimestampComponent implements OnInit {
   form;
   string: any = TimestampComponent.formatTime(TimestampComponent.currentTimestamp()); // 结果初始化数据
 
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      string: ['', Validators.required]
-    });
+  constructor() {
   }
 
   ngOnInit() {

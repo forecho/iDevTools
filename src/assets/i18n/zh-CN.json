@@ -3,6 +3,8 @@
   "COPIED": "已复制",
   "TYPE": "类型",
   "LENGTH": "长度",
+  "MAX": "最大",
+  "MIN": "最小",
   "STRING": "字符串",
   "SUBMIT": "提交",
   "ENCRYPT": "加密",

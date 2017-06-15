@@ -3,6 +3,8 @@
   "COPIED": "Copied",
   "TYPE": "Type",
   "LENGTH": "Length",
+  "MAX": "max",
+  "MIN": "min",
   "STRING": "String",
   "SUBMIT": "Submit",
   "ENCRYPT": "Encrypt",

@@ -7,26 +7,37 @@
         <p class="control" *ngFor="let checkbox of checkboxData">
           <label class="checkbox">
             <input type="checkbox" formControlName="type" name="type"
-                   [checked]="isAvailable(checkbox.value)" (change)="onChange(checkbox.value, $event)">
+                   [checked]="checkbox.checked" (change)="onChange(checkbox.value, $event)">
             {{checkbox.label | translate }}
           </label>
+        </p>
+        <p *ngIf="validateTypes()" class="help is-danger">
+          {{ 'TYPE' | translate}}{{ '_IS_REQUIRED' | translate}}
         </p>
       </div>
 
       <div class="field">
         <p class="control">
           <label class="label">{{ 'LENGTH' | translate }}</label>
-          <input type="number" name="length" class="input" formControlName="length" required
-                 [ngClass]="form.get('length').hasError('required')?'is-danger':''">
+          <input type="number" name="length" class="input" formControlName="length"
+                 [ngClass]="{'is-danger':form.get('length').errors}">
         </p>
         <p *ngIf="form.get('length').hasError('required')" class="help is-danger">
           {{ 'LENGTH' | translate}}{{ '_IS_REQUIRED' | translate}}
+        </p>
+        <p *ngIf="form.get('length').hasError('max')" class="help is-danger">
+          {{ 'LENGTH' | translate }}{{ 'MAX' | translate }} 100
+        </p>
+        <p *ngIf="form.get('length').hasError('min')" class="help is-danger">
+          {{ 'LENGTH' | translate }}{{ 'MIN' | translate }} 2
         </p>
       </div>
 
       <div class="field is-grouped">
         <p class="control">
-          <button class="button is-primary" type="submit" [disabled]="!form.valid">{{ 'SUBMIT' | translate }}</button>
+          <button class="button is-primary" type="submit" [disabled]="!form.valid || validateTypes()">
+            {{ 'SUBMIT' | translate }}
+          </button>
         </p>
       </div>
 

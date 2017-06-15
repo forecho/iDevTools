@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import {FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-unicode',
@@ -11,10 +11,7 @@ export class UnicodeComponent implements OnInit {
   form;
   string: string = UnicodeComponent.charToUnicode('Welcome to iDevTools.org'); // 结果初始化数据
 
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      string: ['', Validators.required]
-    });
+  constructor() {
   }
 
   ngOnInit() {

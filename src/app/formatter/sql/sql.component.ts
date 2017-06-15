@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import {FormGroup, FormControl} from '@angular/forms';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -15,10 +15,8 @@ export class SqlComponent implements OnInit {
   form;
   string: string = ''; // 结果初始化数据
 
-  constructor(private fb: FormBuilder, private http: Http) {
-    this.form = this.fb.group({
-      string: ['', Validators.required]
-    });
+  constructor(private http: Http) {
+
   }
 
   ngOnInit() {

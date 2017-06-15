@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-random',
@@ -12,33 +12,29 @@ export class RandomComponent implements OnInit {
   type: string[] = ['upper', 'number', 'lower'];
   string: string = RandomComponent.randomString(10, this.type); // 结果初始化数据
 
-
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      length: ['', Validators.required]
-    });
+  constructor() {
   }
 
-
   checkboxData = [
-    {label: 'RANDOM_TYPES.UPPERCASE_LETTERS', value: 'upper'},
-    {label: 'RANDOM_TYPES.LOWER_CASE_LETTERS', value: 'lower'},
-    {label: 'RANDOM_TYPES.NUMBERS', value: 'number'},
-    {label: 'RANDOM_TYPES.SPECIAL_CHARACTERS', value: 'special'},
+    {label: 'RANDOM_TYPES.UPPERCASE_LETTERS', value: 'upper', 'checked': true},
+    {label: 'RANDOM_TYPES.LOWER_CASE_LETTERS', value: 'lower', 'checked': true},
+    {label: 'RANDOM_TYPES.NUMBERS', value: 'number', 'checked': true},
+    {label: 'RANDOM_TYPES.SPECIAL_CHARACTERS', value: 'special', 'checked': false},
   ];
 
 
   ngOnInit() {
     this.form = new FormGroup({
-      length: new FormControl(10), //表单初始值
-      type: new FormControl(false), // 表单初始值
+      length: new FormControl(10, [Validators.required, Validators.max(100), Validators.min(2)]),//表单初始值
+      type: new FormControl(true, Validators.required), // 表单初始值
     })
   }
 
-  // 默认值
-  isAvailable = function (value) {
-    return this.type.includes(value);
-  };
+  // 验证 checkbox
+  validateTypes() {
+    return this.type.length == 0;
+  }
+
 
   // checkbox 获取值用法
   onChange(option, event) {

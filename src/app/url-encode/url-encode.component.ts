@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import {FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-url-encode',
@@ -10,10 +10,7 @@ export class UrlEncodeComponent implements OnInit {
   form;
   string: string = decodeURIComponent('http%3A%2F%2Fidevtools.org%2Furl-encode'); // 结果初始化数据
 
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      string: ['', Validators.required]
-    });
+  constructor() {
   }
 
   ngOnInit() {
