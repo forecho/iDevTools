@@ -6,6 +6,7 @@
   background-color: whitesmoke;
   font-size: 1em;
   white-space: pre-wrap;
+  word-wrap: break-word;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
